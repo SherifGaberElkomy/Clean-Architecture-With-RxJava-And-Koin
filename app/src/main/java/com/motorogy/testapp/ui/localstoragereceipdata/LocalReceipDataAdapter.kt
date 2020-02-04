@@ -17,7 +17,6 @@ import com.motorogy.testapp.data.remote.domain.ReceipDoamainModel
 import com.motorogy.testapp.databinding.ItemReceipBinding
 import com.motorogy.testapp.databinding.LocalReceipdataitemBinding
 import com.motorogy.testapp.ui.BindingViewHolder
-import com.motorogy.testapp.ui.callbackinterface.ILocalDataDelete
 import com.motorogy.testapp.ui.receip.ReceipAdapter
 import com.motorogy.testapp.ui.receip.RecipViewModel
 
