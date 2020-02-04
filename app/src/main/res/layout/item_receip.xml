@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="item" type="com.motorogy.testapp.data.remote.domain.ReceipDoamainModel"/>
+        <variable name="vm" type="com.motorogy.testapp.ui.receip.RecipViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/containerItems"
+        android:onClick="@{()-> vm != null ? vm.onQueryChange(item): void}"
+        android:padding="10dp">
+
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageItem"
+            bind:imgUrl="@{item.imgItem}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+        />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/repository_item_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="@{item.title}"
+            app:layout_constraintRight_toLeftOf="@+id/imgItemBtn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/imageItem"
+           />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_bookmark_plus"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:id="@+id/imgItemBtn"
+            android:onClick="@{() -> vm  != null ? vm.saveToReceip(item) : void}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
