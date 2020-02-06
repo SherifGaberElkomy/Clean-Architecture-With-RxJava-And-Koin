@@ -1,5 +1,6 @@
 package com.motorogy.testapp.ui.localstoragereceipdata
 
+import android.os.AsyncTask
 import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.paging.DataSource
@@ -29,22 +30,23 @@ class LocalReceipDataViewModel(private val dao: ReceipDao) : BaseViewModel() {
         get() = _items
 
     fun getAllItems() {
+        var mAppDataBase: AppDataBase? = AppDataBase.invoke(getApplicationContext())
+        AsyncTask.execute(Runnable {
+            try {
+                mAppDataBase?.getReceipDao()?.let {
+                    var itemList: List<ReceipEntity> = it.findAll()
+                    _items.postValue(itemList)
+                }
+            } catch (e: Exception) {
+                e.message?.let {
+                    var mError: String = it
+                    Toast.makeText(getApplicationContext(), mError, Toast.LENGTH_LONG).show()
 
-        try {
-            var mAppDataBase: AppDataBase? = AppDataBase.invoke(getApplicationContext())
-
-            AppDataBase.invoke(getApplicationContext())?.let {
-                var mAppDataBase: AppDataBase = it
-                 var itemList: List<ReceipEntity> = mAppDataBase.getReceipDao().findAll()
-                _items.value = itemList
+                }
 
             }
-        } catch (e: Exception) {
-            e.message?.let {
-                var mError: String = it
-            }
 
-        }
+        })
 
     }
 

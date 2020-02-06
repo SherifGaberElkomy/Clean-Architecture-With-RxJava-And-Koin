@@ -6,13 +6,16 @@
     <data>
         <variable name="item" type="com.motorogy.testapp.data.remote.domain.ReceipDoamainModel"/>
         <variable name="vm" type="com.motorogy.testapp.ui.receip.RecipViewModel"/>
+        <variable
+            name="handlers"
+            type="com.motorogy.testapp.ui.callbackinterface.ICallBackClick" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/containerItems"
-        android:onClick="@{()-> vm != null ? vm.onQueryChange(item): void}"
+        android:onClick="@{()-> handlers != null ? handlers.navigateItemToDetails(item): void}"
         android:padding="10dp">
 
 

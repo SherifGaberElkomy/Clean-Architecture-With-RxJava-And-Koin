@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.motorogy.testapp.R
 import com.motorogy.testapp.data.db.entity.ReceipEntity
 import com.motorogy.testapp.databinding.ActivityLocalDataBinding
-import com.motorogy.testapp.databinding.ActivityReceipBinding
+import com.motorogy.testapp.databinding.ActivityReceipBindingImpl
 import com.motorogy.testapp.ui.BaseViewActivity
 import com.motorogy.testapp.ui.receip.ReceipActivity
 import com.motorogy.testapp.ui.receip.RecipViewModel

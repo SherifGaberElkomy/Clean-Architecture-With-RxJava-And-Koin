@@ -15,64 +15,6 @@ abstract class AppDataBase: RoomDatabase() {
 
     abstract fun getReceipDao(): ReceipDao
 
-//    companion object{
-//
-//        const val DB_VERSION = 1
-//        private const val DB_NAME = "demo.db"
-//        @Volatile
-//        private var INSTANCE: AppDataBase? = null
-//
-//        private var mInstance: AppDataBase? = null
-//
-//        fun getInstance(context: Context): AppDataBase? {
-////            INSTANCE ?: synchronized(this) {
-////                INSTANCE ?: build(context).also {
-////                    INSTANCE = it
-////                }
-//
-//            if(mInstance == null){
-//            //    mInstance = build(context)
-//                mInstance = Room.databaseBuilder(
-//                    context.applicationContext,
-//                    AppDataBase::class.java!!,
-//                    DB_NAME
-//                ).allowMainThreadQueries().build()
-//            }
-//
-//             return mInstance
-//
-//            }
-//
-//
-//        public fun build(context: Context): AppDataBase? {
-//
-//            try {
-//                return  Room.databaseBuilder(context.applicationContext, AppDataBase::class.java, DB_NAME)
-//                    .allowMainThreadQueries().build()
-//            }catch (e: Exception){
-//                e.message?.let{
-//                    var mErrorString: String = it
-//                }
-//            }
-//           return null
-//        }
-//
-//
-//
-////        public fun build(context: Context) =
-////            Room.databaseBuilder(context.applicationContext, AppDataBase::class.java, DB_NAME)
-////                .addMigrations(MIGRATION_1_TO_2)
-////                .build()
-////
-////        private val MIGRATION_1_TO_2 = object : Migration(1, 2) {
-////            override fun migrate(database: SupportSQLiteDatabase) {
-////            }
-////        }
-//    }
-
-
-
-
     companion object {
         @Volatile private var instance: AppDataBase? = null
         private val LOCK = Any()
@@ -82,8 +24,7 @@ abstract class AppDataBase: RoomDatabase() {
         }
 
         private fun buildDatabase(context: Context) = Room.databaseBuilder(context,
-            AppDataBase::class.java, "db-name.db").allowMainThreadQueries()
-            .build()
+            AppDataBase::class.java, "db-name.db").build()
     }
 
 

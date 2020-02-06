@@ -10,9 +10,9 @@ import org.koin.android.ext.android.startKoin
 
 class AppClassApplication : Application() {
 
-   companion object{
-       lateinit var mContext: Context
-   }
+    companion object{
+        lateinit var mContext: Context
+    }
 
     override fun onCreate() {
         super.onCreate()
@@ -24,9 +24,5 @@ class AppClassApplication : Application() {
             roomModule,
             viewModelModule
         ))
-
-
     }
-
-
 }

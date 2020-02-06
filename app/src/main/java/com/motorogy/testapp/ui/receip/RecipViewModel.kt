@@ -60,18 +60,6 @@ class RecipViewModel(private val api: ReceipAPI) : BaseViewModel() {
 
     }
 
-    fun onQueryChange(receipModel: ReceipDoamainModel) {
-    //    this.query = query.toString()
-        var mIntent: Intent = Intent(getApplicationContext(), ReceipDetailsActivity::class.java)
-        mIntent.putExtra("recipItem", receipModel)
-        ReceipActivity.mActivityRunThread.startActivity(mIntent)
-    }
-
-//    fun saveToReceip(receipModel: ReceipDoamainModel) = ioThread { dao.insert(ReceipEntity.toReceip(receipModel)) }
-
-//    fun saveToReceip(receipModel: ReceipDoamainModel){
-//        AppDataBase.getInstance(getApplicationContext()).getReceipDao().insert(ReceipEntity.toReceip(receipModel))
-//    }
 
 
     fun saveToReceip(receipModel: ReceipDoamainModel) = ioThread {
