@@ -27,8 +27,7 @@ class ReceipViewModelTest  : KoinTest {
             override fun postToMainThread(runnable: Runnable) = runnable.run()
         })
 
-//        viewModel = RecipViewModel(get(), Mockito.mock(ReceipDao::class.java))
-        viewModel = RecipViewModel(get())
+        viewModel = RecipViewModel(get(), get())
     }
 
     @After
