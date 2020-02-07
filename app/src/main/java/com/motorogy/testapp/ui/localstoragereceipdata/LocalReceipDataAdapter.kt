@@ -8,6 +8,7 @@ import com.motorogy.testapp.R
 import com.motorogy.testapp.data.db.entity.ReceipEntity
 import com.motorogy.testapp.databinding.LocalReceipdataitemBinding
 import com.motorogy.testapp.ui.BindingViewHolder
+import com.motorogy.testapp.ui.receip.RecipViewModel
 
 class LocalReceipDataAdapter(var items: List<ReceipEntity> = arrayListOf(), val vm: LocalReceipDataViewModel) :
     RecyclerView.Adapter<LocalReceipDataAdapter.ReceipyLocalViewHolder>() {

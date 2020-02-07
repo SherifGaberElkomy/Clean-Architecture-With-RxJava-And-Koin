@@ -18,7 +18,3 @@ fun setReceipLocal(view: RecyclerView, items: List<ReceipEntity>, vm: LocalRecei
     }
 }
 
-//@BindingAdapter("bind:imgUrl")
-//fun setImgItemPicture(imageView: ImageView, imgUrl: String ){
-//    Glide.with(imageView.getContext()).load("https://spoonacular.com/recipeImages/" + imgUrl).into(imageView)
-//}

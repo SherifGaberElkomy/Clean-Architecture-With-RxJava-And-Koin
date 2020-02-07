@@ -50,7 +50,7 @@
             android:src="@drawable/ic_bookmark_plus"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:id="@+id/imgItemBtn"
-            android:onClick="@{() -> sv  != null ? sv.executeRetreiveDataLocally(item) : void}"
+            android:onClick="@{() -> sv  != null ? sv.executeSaveDataLocally(item) : void}"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"/>
