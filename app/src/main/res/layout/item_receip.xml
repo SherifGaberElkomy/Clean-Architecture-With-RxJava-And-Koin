@@ -4,8 +4,11 @@
     xmlns:bind="http://schemas.android.com/tools">
 
     <data>
-        <variable name="item" type="com.motorogy.testapp.data.remote.domain.ReceipDoamainModel"/>
+        <variable name="item" type="com.motorogy.testapp.domain.model.ReceipDoamainModel"/>
         <variable name="vm" type="com.motorogy.testapp.ui.receip.RecipViewModel"/>
+        <variable
+            name="sv"
+            type="com.motorogy.testapp.domain.usecaes.GetAllReceipLocalUseCase" />
         <variable
             name="handlers"
             type="com.motorogy.testapp.ui.callbackinterface.ICallBackClick" />
@@ -47,7 +50,7 @@
             android:src="@drawable/ic_bookmark_plus"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:id="@+id/imgItemBtn"
-            android:onClick="@{() -> vm  != null ? vm.saveToReceip(item) : void}"
+            android:onClick="@{() -> sv  != null ? sv.executeRetreiveDataLocally(item) : void}"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"/>

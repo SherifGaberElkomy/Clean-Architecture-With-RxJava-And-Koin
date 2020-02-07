@@ -1,13 +1,11 @@
 package com.motorogy.testapp
 
-import android.content.Context
-import android.os.AsyncTask
 import androidx.room.Room
 import androidx.test.runner.AndroidJUnit4
 import com.motorogy.testapp.data.db.AppDataBase
 import com.motorogy.testapp.data.db.dao.ReceipDao
 import com.motorogy.testapp.data.db.entity.ReceipEntity
-import com.motorogy.testapp.data.remote.domain.ReceipDoamainModel
+import com.motorogy.testapp.domain.model.ReceipDoamainModel
 import org.junit.After
 import org.junit.Assert
 import org.junit.Before
@@ -37,7 +35,14 @@ class RoomDbTest {
     fun addAndSelectItem() {
         var mLstItem: ArrayList<String> = ArrayList<String>()
         var mReceipModelItem: ReceipDoamainModel =
-            ReceipDoamainModel(0, "Title", 2, 2, "imgPath", mLstItem)
+            ReceipDoamainModel(
+                0,
+                "Title",
+                2,
+                2,
+                "imgPath",
+                mLstItem
+            )
         var mReceipEntity = ReceipEntity.toReceip(mReceipModelItem)
         var mLongItem: Long = receipDao.insert(mReceipEntity)
         Assert.assertEquals(mLongItem, mLongItem)

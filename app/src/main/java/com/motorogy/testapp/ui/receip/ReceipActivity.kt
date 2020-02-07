@@ -31,7 +31,7 @@ class ReceipActivity: BaseViewActivity<ActivityReceipBinding>() {
             binding.vm = getViewModel()
             binding.setLifecycleOwner(this)
             var mReceipViewModel: RecipViewModel = binding.vm as RecipViewModel
-            mReceipViewModel.doSearch()
+           // mReceipViewModel.doSearch()
         }catch (e: Exception){
             e.message?.let {
                 var mError: String = it

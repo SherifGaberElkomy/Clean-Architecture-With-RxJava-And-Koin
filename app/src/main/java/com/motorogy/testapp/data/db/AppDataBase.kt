@@ -4,11 +4,8 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import androidx.room.migration.Migration
-import androidx.sqlite.db.SupportSQLiteDatabase
 import com.motorogy.testapp.data.db.dao.ReceipDao
 import com.motorogy.testapp.data.db.entity.ReceipEntity
-import com.motorogy.testapp.data.remote.domain.ReceipDoamainModel
 
 @Database(entities = [ReceipEntity::class], version = 1, exportSchema = false)
 abstract class AppDataBase: RoomDatabase() {

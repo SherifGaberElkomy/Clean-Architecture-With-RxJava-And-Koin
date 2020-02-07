@@ -6,7 +6,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.motorogy.testapp.R
-import com.motorogy.testapp.data.remote.domain.ReceipDoamainModel
+import com.motorogy.testapp.domain.model.ReceipDoamainModel
 
 class ReceipDetailsActivity : AppCompatActivity() {
 

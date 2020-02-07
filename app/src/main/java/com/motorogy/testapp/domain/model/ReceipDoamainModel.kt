@@ -1,4 +1,4 @@
-package com.motorogy.testapp.data.remote.domain
+package com.motorogy.testapp.domain.model
 
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable

@@ -1,7 +1,6 @@
-package com.motorogy.testapp.data.remote.response
+package com.motorogy.testapp.domain.model
 
 import com.google.gson.annotations.SerializedName
-import com.motorogy.testapp.data.remote.domain.ReceipDoamainModel
 import java.util.ArrayList
 
 data class ReceipApiResponseModel (

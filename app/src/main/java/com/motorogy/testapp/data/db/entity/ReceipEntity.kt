@@ -3,8 +3,7 @@ package com.motorogy.testapp.data.db.entity
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.motorogy.testapp.data.remote.domain.ReceipDoamainModel
-import java.util.ArrayList
+import com.motorogy.testapp.domain.model.ReceipDoamainModel
 
 @Entity(tableName = "Receips")
 data class ReceipEntity(

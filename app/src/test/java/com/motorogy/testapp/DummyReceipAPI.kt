@@ -1,7 +1,7 @@
 package com.motorogy.testapp
 
 import com.motorogy.testapp.data.remote.api.ReceipAPI
-import com.motorogy.testapp.data.remote.response.ReceipApiResponseModel
+import com.motorogy.testapp.domain.model.ReceipApiResponseModel
 import io.reactivex.Single
 
  class DummyReceipAPI: ReceipAPI {

@@ -2,10 +2,7 @@ package com.motorogy.testapp
 
 import android.app.Application
 import android.content.Context
-import com.motorogy.testapp.di.apiModule
-import com.motorogy.testapp.di.networkModule
-import com.motorogy.testapp.di.roomModule
-import com.motorogy.testapp.di.viewModelModule
+import com.motorogy.testapp.di.*
 import org.koin.android.ext.android.startKoin
 
 class AppClassApplication : Application() {
@@ -22,6 +19,8 @@ class AppClassApplication : Application() {
             networkModule,
             apiModule,
             roomModule,
+            repositoryModule,
+            useCasesModule,
             viewModelModule
         ))
     }
