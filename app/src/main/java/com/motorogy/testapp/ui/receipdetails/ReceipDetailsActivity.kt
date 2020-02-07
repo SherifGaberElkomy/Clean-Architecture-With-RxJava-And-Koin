@@ -44,6 +44,5 @@ class ReceipDetailsActivity : AppCompatActivity() {
         mImgVwItem = findViewById(R.id.imgVwItem)
         mTxtVwReadyValue = findViewById(R.id.readyInMinutesTxt)
         mTxtVwServingValue = findViewById(R.id.servingsTxt)
-        var t = 0
     }
 }
