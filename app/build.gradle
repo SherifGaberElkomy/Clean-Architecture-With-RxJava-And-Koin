@@ -76,9 +76,9 @@ dependencies {
     implementation "com.nhaarman:mockito-kotlin-kt1.1:1.5.0"
 
     // required if you want to use Mockito for unit tests
-    testImplementation 'org.mockito:mockito-core:2.24.5'
+    testImplementation 'org.mockito:mockito-core:2.8.9'
     // required if you want to use Mockito for Android tests
-    androidTestImplementation 'org.mockito:mockito-android:2.24.5'
+    androidTestImplementation 'org.mockito:mockito-android:2.8.9'
 
 // Support Libraries
     implementation deps.support.app_compat

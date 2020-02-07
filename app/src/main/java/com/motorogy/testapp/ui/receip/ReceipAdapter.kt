@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.motorogy.testapp.AppClassApplication
 import com.motorogy.testapp.R
 import com.motorogy.testapp.data.db.entity.ReceipEntity
 import com.motorogy.testapp.domain.model.ReceipDoamainModel
@@ -53,11 +54,11 @@ class ReceipAdapter(var items: List<ReceipDoamainModel> = arrayListOf(), val vm:
 
         override fun navigateItemToDetails(receipModel: ReceipDoamainModel) {
             var mIntent: Intent = Intent(
-                ReceipActivity.mActivityRunThread.applicationContext,
+                AppClassApplication.mContext,
                 ReceipDetailsActivity::class.java
             )
             mIntent.putExtra("recipItem", receipModel)
-            ReceipActivity.mActivityRunThread.startActivity(mIntent)
+            AppClassApplication.mContext.startActivity(mIntent)
         }
 
         init {
