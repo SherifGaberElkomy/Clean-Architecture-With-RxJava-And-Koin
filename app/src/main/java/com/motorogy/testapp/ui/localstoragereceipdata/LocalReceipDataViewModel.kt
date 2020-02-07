@@ -32,24 +32,7 @@ class LocalReceipDataViewModel(private val useCaseItemLocal: GetAllReceipLocalUs
 
 
     fun getAllItems() {
-//        var mAppDataBase: AppDataBase? = AppDataBase.invoke(getApplicationContext())
-//        AsyncTask.execute(Runnable {
-//            try {
-//                mAppDataBase?.getReceipDao()?.let {
-//                    var itemList: List<ReceipEntity> = it.findAll()
-//                    _items.postValue(itemList)
-//                }
-//            } catch (e: Exception) {
-//                e.message?.let {
-//                    var mError: String = it
-//                    Toast.makeText(getApplicationContext(), mError, Toast.LENGTH_LONG).show()
-//                }
-//            }
-//        })
-
          useCaseItemLocal.executeRetreiveAllDataLocally(this)
-
-
     }
 
 }
