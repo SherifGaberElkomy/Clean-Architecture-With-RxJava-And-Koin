@@ -47,8 +47,8 @@ class RoomDbTest {
         var mLongItem: Long = receipDao.insert(mReceipEntity)
         Assert.assertEquals(mLongItem, mLongItem)
         
-        var itemList: List<ReceipEntity> = receipDao.findAll()
-        var mSingleObject: ReceipEntity = itemList.get(0)
+        var mItemList: List<ReceipEntity> = receipDao.findAll()
+        var mSingleObject: ReceipEntity = mItemList.get(0)
         Assert.assertEquals(mSingleObject.titleItem, mSingleObject.titleItem)
     }
 
