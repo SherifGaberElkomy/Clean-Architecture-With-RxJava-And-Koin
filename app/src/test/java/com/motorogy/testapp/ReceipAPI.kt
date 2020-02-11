@@ -4,6 +4,7 @@ import com.motorogy.testapp.data.remote.api.ReceipAPI
 import com.motorogy.testapp.domain.model.ReceipApiResponseModel
 import com.motorogy.testapp.domain.repositeries.GetAllReceip
 import com.nhaarman.mockito_kotlin.mock
+import com.nhaarman.mockito_kotlin.whenever
 import io.reactivex.Single
 import org.junit.Test
 import org.junit.runner.RunWith
