@@ -20,7 +20,7 @@ import com.motorogy.testapp.ui.receipdetails.ReceipDetailsActivity
 class ReceipAdapter(var items: List<ReceipDoamainModel> = arrayListOf(), val vm: RecipViewModel) :
     RecyclerView.Adapter<ReceipAdapter.ReceipyViewHolder>() {
 
-    var mItemLocalInsert: GetAllReceipLocalUseCase= vm.mUseCaseItemLocal
+    private var mItemLocalInsert: GetAllReceipLocalUseCase= vm.mUseCaseItemLocal
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ReceipyViewHolder {
 
 
@@ -46,7 +46,7 @@ class ReceipAdapter(var items: List<ReceipDoamainModel> = arrayListOf(), val vm:
             return null
         }
 
-        var mItemInsertLocalData: GetAllReceipLocalUseCase = itemLocalInsert
+        private var mItemInsertLocalData: GetAllReceipLocalUseCase = itemLocalInsert
         override fun executeSaveDataLocally(receipModel: ReceipDoamainModel) {
             mItemInsertLocalData.executeSaveDataLocally(receipModel)
         }
