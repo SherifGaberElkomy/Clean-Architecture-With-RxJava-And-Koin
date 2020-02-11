@@ -34,11 +34,6 @@ class ReceipUseCasesTest {
     @InjectMocks
     lateinit var getAllReceipUseCase: GetAllReceipUseCaseImpl
 
-    @Test
-    fun testApi(){
-        val mockedSingle = mock<Single<ReceipApiResponseModel>>()
-        Mockito.`when`(appRepository.getAllReceip("9d17ab17e29848599905f1bdc3b14016")).thenReturn(mockedSingle)
-    }
 
 
     @Test
