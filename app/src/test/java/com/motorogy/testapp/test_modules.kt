@@ -4,5 +4,5 @@ import com.motorogy.testapp.data.remote.api.ReceipAPI
 import org.koin.dsl.module.module
 
 val testApiModule = module {
-    single { DummyReceipAPI() as ReceipAPI }
+    single { ReceipAPI() as ReceipAPI }
 }

@@ -19,8 +19,11 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.InjectMocks
 import org.mockito.Mock
-import org.mockito.Mockito.mock
-import org.mockito.junit.MockitoJUnitRunner
+import org.mockito.Mockito
+import org.mockito.runners.MockitoJUnitRunner
+
+
+
 
 @RunWith(MockitoJUnitRunner::class)
 class ReceipUseCasesTest {
@@ -30,6 +33,12 @@ class ReceipUseCasesTest {
 
     @InjectMocks
     lateinit var getAllReceipUseCase: GetAllReceipUseCaseImpl
+
+    @Test
+    fun testApi(){
+        val mockedSingle = mock<Single<ReceipApiResponseModel>>()
+        Mockito.`when`(appRepository.getAllReceip("9d17ab17e29848599905f1bdc3b14016")).thenReturn(mockedSingle)
+    }
 
 
     @Test
